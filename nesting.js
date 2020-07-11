@@ -51,7 +51,18 @@ var employees = [
 */
 
 //Code Here
-
+function employeeUpdater(){
+  for(var i = 0; i < employees.length; i++){
+    for(let key in employees[i]){
+      if(employees[i][key] === 'Theo'){
+        employees.splice(i, 1)
+      } else if(employees[i][key] === 'Lorie'){
+        employees[i].department = 'HR'
+      }
+    }
+  }
+  return employees
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -70,6 +81,25 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
+
+// function removeDuplicates(){
+//   const newArray = workplaceAccidents.filter(element,index,array){
+//     return array.indexOf(element) === index
+//   })
+//   return newArray
+// }
+
+
+function removeDuplicates(){
+  for(let i = 0; i < workplaceAccidents.length; i++){
+    for(let j = i + 1; j < workplaceAccidents.length; j++){
+      if(workplaceAccidents[i] === workplaceAccidents[j]){
+        workplaceAccidents.splice(j,1)
+      }
+    }
+  }
+  return workplaceAccidents
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -90,6 +120,7 @@ var cat = {
 }
 // Do not edit the code above.
 
+
 /*
   Fluffy has two friends, Grumpy and Lazy Bones. 
     1. Assign the value of Grumpy's 2nd activity to the grumpyActivity variable below.
@@ -97,11 +128,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
-
-
-
+var grumpyActivity = cat.catFriends[0].activities[1]
+var fluffy2ndFriend = cat.catFriends[1].name
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -140,6 +168,13 @@ var myCar = {
 
 //Code Here
 
+function recordCleaner(){
+  for(let i = 0; accidents.length; i++){
+    if(accidents[i] === true){
+    }
+  }
+  return accidents
+}
 
 
 ////////// PROBLEM 5 //////////
